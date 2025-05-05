@@ -9,7 +9,7 @@ autoscaling:
   enabled: false
 
 serviceAccount:
-create: true
-name: ""
-annotations: {}
-automount: true
+  create: true
+  name: ""
+  annotations: {}
+  automount: true
