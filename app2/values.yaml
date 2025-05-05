@@ -13,3 +13,6 @@ serviceAccount:
   name: ""
   annotations: {}
   automount: true
+
+ingress:
+  enabled: false
