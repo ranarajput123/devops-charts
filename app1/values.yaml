@@ -1,1 +1,9 @@
 imageTag: app1-latest
+
+service:
+  type: ClusterIP
+  port: 80
+  annotations: {}
+
+autoscaling:
+  enabled: false
