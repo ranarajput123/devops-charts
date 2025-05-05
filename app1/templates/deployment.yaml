@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: "ranarajput/devops-registry:{{ .Values.imageTag }}"
+        image: "ranarajput/devops-registry:app1-latest"
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
