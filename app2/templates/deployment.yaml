@@ -16,5 +16,7 @@ spec:
       - name: app2
         image: "ranarajput/devops-registry:app2-latest"
         imagePullPolicy: Always
+        imagePullSecrets:
+        - name: docker-registry-secret
         ports:
         - containerPort: 3000
