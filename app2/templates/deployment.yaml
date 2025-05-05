@@ -15,6 +15,6 @@ spec:
       containers:
       - name: app2
         image: "ranarajput/devops-registry:{{ .Values.imageTag }}"
-        imagePullPolicy: always
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
