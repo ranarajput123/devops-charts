@@ -13,4 +13,9 @@ serviceAccount:
   automount: true
 
 ingress:
-  enabled: false
+  enabled: true
+  hosts:  # The host to forward requests to
+    - host: "app1.com"  # Hostname for the Ingress
+      paths:
+        - path: "/"  # Path to match, here we are routing all paths
+          pathType: Prefix  # Optional: can be "Prefix" or "Exact"
