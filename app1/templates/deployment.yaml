@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: app1-deployment
   labels:
-    name: app1
+    {{- include "app1.labels" . | nindent 4 }}  # Using app1.labels for common labels
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: app1
+      {{- include "app1.selectorLabels" . | nindent 8 }}  # Using app1.selectorLabels for selector
   template:
     metadata:
       labels:
-        name: app1
+        {{- include "app1.selectorLabels" . | nindent 8 }}  # Using app1.selectorLabels for template labels
     spec:
       containers:
       - name: app1
