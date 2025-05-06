@@ -13,4 +13,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    name:app1
+    name: app1
