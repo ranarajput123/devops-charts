@@ -2,13 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app1-deployment
-  labels:
-    {{- include "app1.labels" . | nindent 4 }}  # Using app1.labels for common labels
 spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include "app1.selectorLabels" . | nindent 8 }}  # Using app1.selectorLabels for selector
+      name: app1
   template:
     metadata:
       labels:
