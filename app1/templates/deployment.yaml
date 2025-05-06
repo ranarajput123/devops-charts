@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "app1.selectorLabels" . | nindent 8 }}  # Using app1.selectorLabels for template labels
+        name:app1
     spec:
       containers:
       - name: app1
